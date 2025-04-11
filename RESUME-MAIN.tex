@@ -1,0 +1,228 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+\usepackage{fontawesome}
+
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Yili}{Yang}{ \urlstyle{same}
+\href{mailto:yyleli@gmail.com}{yyleli@gmail.com} |
++44 7490334233 | \faMapMarker Edinburgh, UK
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+\subsection{University of Edinburgh}
+\descript{PhD Petrophysics,2021}
+\descript{MSc in Geology, 2016}
+\descript{BSc in Geoscience, 2015}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+\href{https://github.com/yi-li-yang}{\bf GitHub} ||
+\href{https://www.linkedin.com/in/yiliyang}{\bf LinkedIn} ||\\
+\href{https://scholar.google.com/citations?&user=8I00DowAAAAJ}{\bf Google Scholar} ||
+\href{https://orcid.org/0000-0002-1791-3899}{\textbf{ORCID}}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Domains}
+AI for Science
+\\
+Geospatial Data
+\\
+Machine Learning \& Deep Learning 
+\\
+Multimodal Learning
+\\
+Computer Vision
+\\
+Data \& image processing
+\\
+Digital Rocks
+\sectionsep
+
+\subsection{Programming}
+\location{Python}
+Numpy \textbullet{} 
+Scipy \textbullet{} 
+Matplotlib \textbullet{} 
+Seaborn 
+Tensorflow \textbullet{} 
+PyTorch \textbullet{} 
+Scikit-Image 
+Scikit-Learn \textbullet{}
+RasterIO \textbullet{} 
+Rioxarray  
+Google Earth Engine\textbullet{} 
+Geemap\textbullet{} 
+CV2 
+XGBoost \textbullet{} 
+Pandas \textbullet{}
+Geopandas \textbullet{}
+Google Cloud Platform
+\\
+\location{Other}
+\LaTeX \textbullet{}
+JavaScript \textbullet{} 
+JSON 
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     WORKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Stats}
+\subsection{Publications}
+Journal Papers: 6
+\\
+Conferences: 9
+
+\subsection{Academic Services}
+Invited Talks \& Panels: 10
+\\
+Peer-reviews: 5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\runsubsection{Woodwell Climate Research Center}
+\descript{| Data Scientist }
+\location{Jan 2022 - Present | Falmouth, MA}
+
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+    \item \textbf{Project Lead} : Thaw slumps detection using deep learning and remote sensing
+    \item \textbf{Project Lead} : Multi-domain climate time-series prediction
+    \item \textbf{Collaborations}: Computer vision wild fire detection
+    \item \textbf{Collaborations}: Machine learning wild fire prediction
+    \item \textbf{Collaborations}: Carbon Flux time-series data imputation
+    \item \textbf{Workshops}: Annual Workshop for Machine Learning
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Faculty.AI}
+\descript{| Data Science Fellow }
+\location{Sep 2021 - Dec 2021 | London, UK}
+\begin{tightemize}
+    \item Technical and commercial training for professional data scientist followed by work placement on a client project
+\end{tightemize}
+\sectionsep
+
+\runsubsection{ICCR}
+\descript{| PhD Researcher }
+\location{Sep 2016 - Apr 2021 | Edinburgh, UK}
+\begin{tightemize}
+    \item Petrophysical calculation and simulation algorithm development
+    \item Deep learning image segmentation for digital rocks
+    \item Synchrotron X-ray $\mu$-CT multiphase fluid experiments
+\end{tightemize}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Awards \& Grants} 
+\location{Funding for Climate Solutions, Woodwell Climate Reserach Center}
+
+\$99,749 | 2025-2026 | A Generic Climate AI Framework for Multi-domain Time Series Pre-diction
+
+
+\sectionsep
+
+
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
